@@ -1,9 +1,7 @@
-# Fun2: Tracking the untrackable: A reinforcement learning framework for quantitative analysis of chromatin fountains/stripes
+# Fun2 is tracking the untrackable: A reinforcement learning framework for quantitative analysis of chromatin fountains/stripes
 
-<!-- Badges (可添加 Zenodo/License/Build Status) -->
-<!-- ![DOI](https://zenodo.org/badge/641802007.svg) -->
 
-**Fun2** is a **reinforcement learning framework** designed to dynamically track **replication fountain structures**.
+<!-- Here is the workflow of Fun2 -->
 
 <div style="margin-bottom:200px; text-align:center;">
   <img src="https://github.com/zzdzr/Fun2/blob/main/docs/image/workingModel4.svg" 
@@ -43,7 +41,7 @@
 ## Description
 Replication forks in mammalian cells often progress in a **coupled** manner. Under replication stress, **type-II fountains** exhibit distinct uncoupling degrees. **Fun2** quantitatively tracks these dynamics and relates uncoupling to higher-order chromatin structures (e.g., loops), replication timing shifts, and fork-restart defects. The toolkit is intended for large-scale screening, hypothesis testing, and figure-ready output.
 
-<div align="right">[⬆ Back to top](#table-of-contents)</div>
+<p align="right">[⬆️ Back to top](#table-of-contents)</p>
 
 ---
 
