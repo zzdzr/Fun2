@@ -72,7 +72,7 @@ nohup fun2 config.yaml &
 ```yaml
 # Example configuration for Fun2 (fountain detection)
 
-#io:
+## io:
   # Paths for input and output
   juicer_jar: "juicer_tools.1.9.9_jcuda.0.8.jar"
   chrom_size: "./config/genome/hg19.chrom.size"
@@ -80,7 +80,7 @@ nohup fun2 config.yaml &
   working_dir: "./data/fountains/NT"
   input_hic: "./data/NT_merged.rm1k.downsample.hic"
 
-#preprocess:
+## preprocess:
   # Script to generate cooler from Hi-C
   generate_cooler_script: "./preprocess/generate_cooler.py"
   oe_matrix_dir: "./data/fountains/NT/oe_matrix"
@@ -91,7 +91,7 @@ nohup fun2 config.yaml &
   summits_threshold: 0.15
   padding: 25000    # bp
 
-#son:
+## son:
   # SoN calculation parameters
   calSoN_script: "calculate_son.py"
   SoN_params:
@@ -107,7 +107,7 @@ nohup fun2 config.yaml &
   resolution: 5000
   oe_normalization: "VC_SQRT"
 
-#planner:
+## planner:
   # Fountain identification settings (MCTS + ES in continuous space)
   ini_height: 100
   ini_width:  25
