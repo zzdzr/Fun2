@@ -135,15 +135,41 @@ nohup fun2 config.yaml &
 ## Sampling Box & Axes Configuration
 <img src="https://github.com/zzdzr/Fun2/blob/main/docs/image/axis.svg" alt="SamplingBox" width="500" height="500" align="left"/>
 
-  In the contact matrix, the global coordinate system is defined by the *u*-axis and *v*-axis.  
-An orientation of **0°** corresponds to a direction parallel to the *v*-axis, whereas **90°** is parallel to the *u*-axis.  
-Sampling box orientations are specified with respect to this global axis system.  
-  Each sampling box also possesses its own local geometric coordinates, denoted as the *x*-axis and *y*-axis, which define its intrinsic **length**, **width**, and **rotation angle**.  
-This dual-axis definition allows explicit mapping between global matrix coordinates and the sampling box geometry.
-  A complete sampling box is divided into multiple **layers** along its lengthwise extension.  
-During analysis, layers sequentially capture signals as the box extends.  
-  Each layer is further subdivided into a **central signal region** (purple) and two **edge regions** flanking it.  
-The edge regions are used to estimate local background signal levels, analogous to edge detection techniques in image processing, thereby enhancing contrast between the feature of interest and its surrounding background.
+#### 1) Global axis and angle convention (contact matrix)
+- The contact matrix uses a global coordinate system **(u, v)**.
+- Orientation angles **θ** are defined **with respect to the matrix axes**:
+  - **0°** → direction **parallel to the v-axis**
+  - **90°** → direction **parallel to the u-axis**
+- Unless stated otherwise, angles increase counter-clockwise in the *(u, v)* frame.
+
+#### 2) Local geometry of the sampling box
+- Each sampling box has its own local coordinates **(x, y)**:
+  - **y-axis**: the **extension** (lengthwise) direction of the box.
+  - **x-axis**: the direction **perpendicular** to the extension (across-box).
+- Geometric parameters:
+  - **Length (h)**: extent along the **y**-axis.
+  - **Width (w)**: extent along the **x**-axis.
+  - **Rotation (θ)**: box orientation expressed in the **global (u, v)** system.
+- This dual-axis definition (global *(u, v)*, local *(x, y)*) permits explicit mapping between matrix coordinates and box geometry.
+
+#### 3) Layered sampling and background estimation
+- The box is partitioned into **K layers** along the **y**-axis (extension direction).
+- At each layer *i*, the area is split into:
+  - a **central signal region** (purple), and
+  - two **edge bands** flanking it (the **edge width** is user-specified).
+- The edge bands provide **local background** estimates, analogous to **edge-detection** strategies in image processing, thereby improving contrast between the trajectory signal and surrounding background.
+
+#### 4) Notation recap
+| Symbol | Meaning (in this section) |
+|:--|:--|
+| `(u, v)` | Global axes of the contact matrix |
+| `(x, y)` | Local axes of a sampling box (across vs. along extension) |
+| `θ` | Box orientation measured in the global *(u, v)* frame (0° ∥ v-axis; 90° ∥ u-axis) |
+| `w` | Box width along **x** |
+| `h` | Box length along **y** |
+| `K` | Number of layers (along **y**) |
+| `edge width` | Thickness of background bands flanking the central region at each layer |etween the feature of interest and its surrounding background.
+
 <br clear="all"/>
 
 ## Affine Transformation
