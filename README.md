@@ -203,7 +203,10 @@ By combining these transformations, Fun2 performs **geometric normalization** an
 <br clear="all"/>
 
 ## MCTS planning
-<img src="https://github.com/zzdzr/Fun2/blob/main/docs/image/MCTS.svg" alt="Transformation" width="730" height="350"/>
+<p align="center">
+  <img src="https://github.com/zzdzr/Fun2/blob/main/docs/image/MCTS.svg"
+       alt="MCTS planning" width="730">
+</p>
 
 Fun2 employs **Monte Carlo Tree Search (MCTS)** in a **continuous spatial search space** to optimize sampling box placement and trajectory planning.  
 The MCTS process iteratively explores the search space to identify high-value geometric configurations, enabling efficient detection of trajectory-like features in contact matrices.
