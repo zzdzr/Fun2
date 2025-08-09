@@ -83,8 +83,3 @@ We have recently published the RFpeptides protocol for using RFdiffusion to desi
 Here is the illustration of MCTS planning.
 
 <br clear="all"/>
-
-## Working
-<img src="https://github.com/zzdzr/Fun2/blob/main/docs/image/workingModel2.svg" alt="Transformation" width="850" height="350"/>
-
-<br clear="all"/>
