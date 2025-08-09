@@ -177,8 +177,29 @@ nohup fun2 config.yaml &
 ## Affine Transformation
 <img src="https://github.com/zzdzr/Fun2/blob/main/docs/image/affineTransform.svg" alt="Transformation" width="300" height="300" align="left"/>
 
-We have recently published the RFpeptides protocol for using RFdiffusion to design macrocyclic peptides that bind target proteins with atomic accuracy (Rettie, Juergens, Adebomi, et al., 2025). In this section we briefly outline how to run this inference protocol. We have added two examples for running macrocycle design with the RFpeptides protocol. One for monomeric design, and one for binder design.
+In **Fun2**, an affine transformation extends the concept of a static sampling box into a **dynamic structure** capable of continuous-space transformations.  
+This enables the sampling box to **trace trajectory-like patterns** in the contact matrix and quantitatively describe their properties.
 
+Four primary forms of affine transformation are applied:
+
+1. **Extension (`Δl`)**  
+   - Adjusts the box length (*h*, along the y-axis).  
+   - **−Δl** shortens the box; **+Δl** lengthens it, allowing coverage of varying segment lengths along the trajectory.
+
+2. **Rotation (`Δθ`)**  
+   - Rotates the box relative to the global *(u, v)* coordinate system.  
+   - **−Δθ** rotates counter-clockwise; **+Δθ** rotates clockwise.  
+   - Enables alignment of the sampling box with directional patterns in the data.
+
+3. **Expansion (`Δw`)**  
+   - Modifies the box width (*w*, along the x-axis).  
+   - **−Δw** narrows the box; **+Δw** widens it, tuning the cross-track coverage and sensitivity.
+
+4. **Translocation (`Δx`)**  
+   - Shifts the box laterally along the x-axis without changing its orientation or dimensions.  
+   - **−Δx** shifts left; **+Δx** shifts right, enabling local repositioning while maintaining the same geometric parameters.
+
+By combining these transformations, Fun2 performs **geometric normalization** and optimizes box placement in a continuous spatial search space—forming the basis for trajectory detection and characterization.
 <br clear="all"/>
 
 ## MCTS planning
