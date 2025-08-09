@@ -69,7 +69,64 @@ nohup fun2 config.yaml &
 ```
 
 ## Configuration
+```yaml
+# Example configuration for Fun2 (fountain detection)
 
+io:
+  # Paths for input and output
+  juicer_jar: "juicer_tools.1.9.9_jcuda.0.8.jar"
+  chrom_size: "./config/genome/hg19.chrom.size"
+  full_name: "Repli-HiC_test"
+  working_dir: "./data/fountains/NT"
+  input_hic: "./data/NT_merged.rm1k.downsample.hic"
+
+preprocess:
+  # Script to generate cooler from Hi-C
+  generate_cooler_script: "./preprocess/generate_cooler.py"
+  oe_matrix_dir: "./data/fountains/NT/oe_matrix"
+  cooler_output_dir: "./data/fountains/NT/oe_cooler"
+
+  # Summit detection
+  summits_output_dir: "./data/fountains/NT/summits"
+  summits_threshold: 0.15
+  padding: 25000    # bp
+
+son:
+  # SoN calculation parameters
+  script: "calculate_son.py"
+  params:
+    - { height: 100, width: 25, angle: 45 }
+    - { height: 200, width: 25, angle: 45 }
+    - { height: 300, width: 25, angle: 45 }
+  resolution: 5000
+  oe_normalization: "VC_SQRT"
+
+planner:
+  # Fountain identification settings (MCTS + ES in continuous space)
+  ini_height: 100
+  ini_width:  25
+  ini_angle:  45
+  layer_height: 1
+  edge_width: 8
+  max_iter: 500
+  exploration_constant: 10
+  alpha: 0.5
+  es_popsize: 8
+  es_sigma: 5.0
+  momentum: 0
+  max_rollout_depth: 1
+  eta: 1
+  es_lr: 2.0
+  gamma: 0.9
+  action_limits: [[-2, 2], [-50, 50], [-2, 2], [0, 0]]  # Δpos, Δangle, Δwidth, Δheight
+  angle_boundary: [40, 50]
+  n_process: 10
+  seed: 1
+  mode: "default"
+
+output:
+  fountain_path: "./data/fountains/NT/results"
+```
 
 ## Sampling Box & Axes Configuration
 <img src="https://github.com/zzdzr/Fun2/blob/main/docs/image/axis.svg" alt="SamplingBox" width="500" height="500" align="left"/>
