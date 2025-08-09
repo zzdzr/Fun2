@@ -118,7 +118,7 @@ planner:
   eta: 1
   es_lr: 2.0
   gamma: 0.9
-  action_limits: [[-2, 2], [-50, 50], [-2, 2], [0, 0]]  # Δpos, Δangle, Δwidth, Δheight
+  action_limits: [[-2, 2], [-50, 50], [-2, 2], [0, 0]]
   angle_boundary: [40, 50]
   n_process: 10
   seed: 1
