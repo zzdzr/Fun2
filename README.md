@@ -41,7 +41,7 @@
 ## Description
 Replication forks in mammalian cells often progress in a **coupled** manner. Under replication stress, **type-II fountains** exhibit distinct uncoupling degrees. **Fun2** quantitatively tracks these dynamics and relates uncoupling to higher-order chromatin structures (e.g., loops), replication timing shifts, and fork-restart defects. The toolkit is intended for large-scale screening, hypothesis testing, and figure-ready output.
 
-<p align="right">[⬆️ Back to top](#table-of-contents)</p>
+[⬆️ Back to top](#table-of-contents)
 
 ---
 
