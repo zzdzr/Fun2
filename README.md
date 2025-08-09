@@ -10,10 +10,11 @@ A **reinforcement learning framework** for quantitative analysis of **chromatin 
 </div>
 
 > **Highlights**
-> - Sampling box / axes control for tiled, multi-resolution scans  
-> - Robust affine transforms for coordinate normalization  
-> - **MCTS** (Monte Carlo Tree Search) planning for trajectory search  
-> - Reproducible pipelines and exportable outputs (HDF5/CSV/figures)
+> - Developed and validated a novel method for high-precision identification and tracking of **fountain / stripe-like chromatin structures**.
+> - Integrated reinforcement learning with **Monte Carlo Tree Search (MCTS)** operating in a **continuous spatial search space** to optimize sampling and trajectory planning in an automated analysis pipeline.
+> - Quantitatively characterized dynamic changes between coupled and uncoupled replication fork states under various replication stress conditions.
+> - Combined geometric normalization (affine transforms) with multi-resolution sampling to enhance cross-sample and cross-condition comparability.
+> - Produced reproducible outputs including visual figures, scoring tables, and configuration snapshots, enabling large-scale screening and hypothesis testing.
 ---
 
 # Table of Contents
