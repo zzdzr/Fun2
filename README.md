@@ -132,7 +132,7 @@ nohup fun2 config.yaml &
   mode: "default"
 ```
 
-## Sampling Box & Axes Configuration
+<!-- ## Sampling Box & Axes Configuration
 <img src="https://github.com/zzdzr/Fun2/blob/main/docs/image/axis.svg" alt="SamplingBox" width="500" height="500" align="left"/>
 
 #### 1) Global axis and angle convention (contact matrix)
@@ -170,7 +170,40 @@ nohup fun2 config.yaml &
 | `K` | Number of layers (along **y**) |
 | `edge width` | Thickness of background bands flanking the central region at each layer |etween the feature of interest and its surrounding background.
 
-<br clear="all"/>
+<br clear="all"/> -->
+
+
+## Sampling Box & Axes Configuration
+
+<table>
+<tr>
+<td width="45%">
+<img src="https://github.com/zzdzr/Fun2/blob/main/docs/image/axis.svg" alt="SamplingBox" width="500"/>
+</td>
+<td width="55%" valign="top">
+
+#### 1) Global axis and angle convention (contact matrix)
+- The contact matrix uses a global coordinate system **(u, v)**.
+- Orientation angles **θ** are defined **with respect to the matrix axes**:
+  - **0°** → direction **parallel to the v-axis**
+  - **90°** → direction **parallel to the u-axis**
+- Unless stated otherwise, angles increase counter-clockwise in the *(u, v)* frame.
+
+#### 2) Local geometry of the sampling box
+- Each sampling box has its own local coordinates **(x, y)**:
+  - **y-axis**: the **extension** (lengthwise) direction of the box.
+  - **x-axis**: the direction **perpendicular** to the extension (across-box).
+- Geometric parameters:
+  - **Length (h)**: extent along the **y**-axis.
+  - **Width (w)**: extent along the **x**-axis.
+  - **Rotation (θ)**: box orientation expressed in the **global (u, v)** system.
+- This dual-axis definition permits explicit mapping between matrix coordinates and box geometry.
+
+</td>
+</tr>
+</table>
+
+
 
 ## Affine Transformation
 <img src="https://github.com/zzdzr/Fun2/blob/main/docs/image/affineTransform.svg" alt="Transformation" width="300" height="300" align="left"/>
