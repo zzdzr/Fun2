@@ -11,10 +11,9 @@ A **reinforcement learning framework** for quantitative analysis of **chromatin 
 
 > **Highlights**
 > - Developed and validated a novel method for high-precision identification and tracking of **fountain / stripe-like chromatin structures**.
-> - Integrated reinforcement learning with **Monte Carlo Tree Search (MCTS)** operating in a **continuous spatial search space** to optimize sampling and trajectory planning in an automated analysis pipeline.
-> - Quantitatively characterized dynamic changes between coupled and uncoupled replication fork states under various replication stress conditions.
-> - Combined geometric normalization (affine transforms) with multi-resolution sampling to enhance cross-sample and cross-condition comparability.
+> - Integrated reinforcement learning with Monte Carlo Tree Search (MCTS) in a continuous spatial action space, combined with geometric transformation (**affine transformation**) to jointly optimize sampling and trajectory planning while enabling cross-sample and cross-condition comparability in an automated analysis pipeline.
 > - Produced reproducible outputs including visual figures, scoring tables, and configuration snapshots, enabling large-scale screening and hypothesis testing.
+> - Quantitatively characterized dynamic changes between coupled and uncoupled replication fork states under various replication stress conditions.
 ---
 
 # Table of Contents
