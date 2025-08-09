@@ -62,6 +62,10 @@ pip install -e .
 ## Quick Usage
 Here is the one-step usage.
 <img src="https://github.com/zzdzr/Fun2/blob/main/docs/image/workingModel2.svg" alt="Transformation" width="800" height="350"/>
+```bash
+# 1) You just need to submit one line of command:
+nohup fun2 config.yaml &
+```
 
 ## Sampling Box & Axes Configuration
 <img src="https://github.com/zzdzr/Fun2/blob/main/docs/image/axis.svg" alt="SamplingBox" width="500" height="500" align="left"/>
