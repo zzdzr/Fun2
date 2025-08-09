@@ -65,7 +65,7 @@ pip install -e .
 
 ## Quick Usage
 Here is the one-step usage.
-<img src="https://github.com/zzdzr/Fun2/blob/main/docs/image/workingModel2.svg" alt="Transformation" width="850" height="350"/>
+<img src="https://github.com/zzdzr/Fun2/blob/main/docs/image/workingModel2.svg" alt="Transformation" width="800" height="350"/>
 
 ## Sampling Box & Axes Configuration
 <img src="https://github.com/zzdzr/Fun2/blob/main/docs/image/axis.svg" alt="SamplingBox" width="500" height="500" align="left"/>
@@ -82,7 +82,7 @@ We have recently published the RFpeptides protocol for using RFdiffusion to desi
 <br clear="all"/>
 
 ## MCTS planning
-<img src="https://github.com/zzdzr/Fun2/blob/main/docs/image/MCTS.svg" alt="Transformation" width="700" height="350"/>
+<img src="https://github.com/zzdzr/Fun2/blob/main/docs/image/MCTS.svg" alt="Transformation" width="770" height="350"/>
 
 Here is the illustration of MCTS planning.
 
