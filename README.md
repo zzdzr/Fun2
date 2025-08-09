@@ -40,6 +40,30 @@
 
 ---
 
+## Description
+Replication forks in mammalian cells often progress in a **coupled** manner. Under replication stress, **type-II fountains** exhibit distinct uncoupling degrees. **Fun2** quantitatively tracks these dynamics and relates uncoupling to higher-order chromatin structures (e.g., loops), replication timing shifts, and fork-restart defects. The toolkit is intended for large-scale screening, hypothesis testing, and figure-ready output.
+
+<div align="right">[⬆ Back to top](#table-of-contents)</div>
+
+---
+
+# Getting Started / Installation
+
+### 🚀 Quick start
+```bash
+# 1) Clone
+git clone https://github.com/zzdzr/Fun2.git
+cd Fun2
+
+# 2) Create environment (recommended)
+conda env create -f environment.yml
+conda activate fun2
+
+# 3) Install in development mode
+pip install -e .
+
+---
+
 ## 🖼️ Details
 
 
@@ -70,13 +94,3 @@ Here is the illustration of MCTS planning.
 Here is the illustration of MCTS planning.
 
 <br clear="all"/>
-
-## 🚀 Installation
-Clone the repository and set up the environment:
-
-```bash
-git clone https://github.com/zzdzr/Fun2.git
-cd Fun2
-conda env create -f environment.yml
-conda activate fun2
-pip install -e .
