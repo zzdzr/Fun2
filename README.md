@@ -23,7 +23,7 @@ A **reinforcement learning framework** for quantitative analysis of **chromatin 
 - [Getting Started / Installation](#getting-started--installation)
   - [Quick start](#quick-start)
 - [Usage](#usage)
-  - [Quick usage](#quick-usage)
+  - [One-step usage](#one-step-usage)
   - [Configuration](#configuration)
   - [Sampling Box & Axes Configuration](#sampling-box--axes-configuration)
   - [Affine Transformation](#affine-transformation)
@@ -60,18 +60,16 @@ pip install -e .
 
 # 🖼️ Usage
 
-## Quick Usage
+## One-step usage
 Here is the one-step usage.
 <img src="https://github.com/zzdzr/Fun2/blob/main/docs/image/workingModel2.svg" alt="Transformation" width="800" height="350"/>
 ```bash
 # 1) You just need to submit one line of command:
 nohup fun2 config.yaml &
 ```
----
 
 ## Configuration
 
----
 
 ## Sampling Box & Axes Configuration
 <img src="https://github.com/zzdzr/Fun2/blob/main/docs/image/axis.svg" alt="SamplingBox" width="500" height="500" align="left"/>
