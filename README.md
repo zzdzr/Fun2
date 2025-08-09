@@ -132,7 +132,7 @@ nohup fun2 config.yaml &
   mode: "default"
 ```
 
-<!-- ## Sampling Box & Axes Configuration
+## Sampling Box & Axes Configuration
 <img src="https://github.com/zzdzr/Fun2/blob/main/docs/image/axis.svg" alt="SamplingBox" width="500" height="500" align="left"/>
 
 #### 1) Global axis and angle convention (contact matrix)
@@ -160,44 +160,6 @@ nohup fun2 config.yaml &
 - The edge bands provide **local background** estimates, analogous to **edge-detection** strategies in image processing, thereby improving contrast between the trajectory signal and surrounding background.
 
 #### 4) Notation recap
-| Symbol | Meaning (in this section) |
-|:--|:--|
-| `(u, v)` | Global axes of the contact matrix |
-| `(x, y)` | Local axes of a sampling box (across vs. along extension) |
-| `θ` | Box orientation measured in the global *(u, v)* frame (0° ∥ v-axis; 90° ∥ u-axis) |
-| `w` | Box width along **x** |
-| `h` | Box length along **y** |
-| `K` | Number of layers (along **y**) |
-| `edge width` | Thickness of background bands flanking the central region at each layer |etween the feature of interest and its surrounding background.
-
-<br clear="all"/> -->
-
-## Sampling Box & Axes Configuration
-<img src="https://github.com/zzdzr/Fun2/blob/main/docs/image/axis.svg" alt="SamplingBox" width="350" align="left"/>
-
-### 1) Global axis and angle convention (contact matrix)
-- The contact matrix uses a global coordinate system **(u, v)**.
-- Orientation angle **θ (angle)** is defined **with respect to the matrix axes**:
-  - **0°** → parallel to **v-axis**
-  - **90°** → parallel to **u-axis**
-- Unless specified, angles increase counter-clockwise in the *(u, v)* frame.
-
-### 2) Local geometry of the sampling box
-- Each sampling box has its own local coordinates **(x, y)**:
-  - **y-axis** → **extension direction** (lengthwise, `h` / **height**)
-  - **x-axis** → **across-box direction** (widthwise, `w` / **width**)
-- Box orientation **θ (angle)** is expressed in the **global (u, v)** frame.
-- This dual-axis system (global *(u, v)*, local *(x, y)*) allows explicit mapping between the contact matrix and box geometry.
-
-### 3) Layered sampling and background estimation
-- The box is divided into **K layers** along **y-axis** (extension direction).
-  - `K` is determined by `layer_height` and total `h` (height).
-- At each layer *i*, the area is split into:
-  - **Central signal region** (purple), and
-  - **Two edge bands** of width `edge_width` on each side.
-- Edge bands estimate **local background** (analogous to image edge-detection), improving contrast between target signal and background.
-
-### 4) Notation recap
 | Symbol | Meaning | Corresponding config parameter |
 |:--|:--|:--|
 | `(u, v)` | Global axes of the contact matrix | — |
@@ -209,6 +171,7 @@ nohup fun2 config.yaml &
 | `edge_width` | Width of background bands | `edge_width` |
 
 <br clear="all"/>
+
 
 
 ## Affine Transformation
