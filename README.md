@@ -24,6 +24,7 @@ A **reinforcement learning framework** for quantitative analysis of **chromatin 
   - [Quick start](#quick-start)
 - [Usage](#usage)
   - [Quick usage](#quick-usage)
+  - [Configuration](#configuration)
   - [Sampling Box & Axes Configuration](#sampling-box--axes-configuration)
   - [Affine Transformation](#affine-transformation)
   - [MCTS Planning](#mcts-planning)
@@ -66,6 +67,11 @@ Here is the one-step usage.
 # 1) You just need to submit one line of command:
 nohup fun2 config.yaml &
 ```
+---
+
+## Configuration
+
+---
 
 ## Sampling Box & Axes Configuration
 <img src="https://github.com/zzdzr/Fun2/blob/main/docs/image/axis.svg" alt="SamplingBox" width="500" height="500" align="left"/>
