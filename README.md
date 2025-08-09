@@ -27,10 +27,6 @@ A **reinforcement learning framework** for quantitative analysis of **chromatin 
   - [Sampling Box & Axes Configuration](#sampling-box--axes-configuration)
   - [Affine Transformation](#affine-transformation)
   - [MCTS Planning](#mcts-planning)
-- [Examples](#examples)
-  - [Minimal end-to-end run](#minimal-end-to-end-run)
-  - [Batch over chromosomes](#batch-over-chromosomes)
-- [Practical Considerations](#practical-considerations)
 - [Understanding the Output Files](#understanding-the-output-files)
 - [Repository Structure](#repository-structure)
 - [License & Citation](#license--citation)
@@ -82,7 +78,7 @@ We have recently published the RFpeptides protocol for using RFdiffusion to desi
 <br clear="all"/>
 
 ## MCTS planning
-<img src="https://github.com/zzdzr/Fun2/blob/main/docs/image/MCTS.svg" alt="Transformation" width="770" height="350"/>
+<img src="https://github.com/zzdzr/Fun2/blob/main/docs/image/MCTS.svg" alt="Transformation" width="730" height="350"/>
 
 Here is the illustration of MCTS planning.
 
