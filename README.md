@@ -1,6 +1,6 @@
-# Fun2 is tracking the untrackable: A reinforcement learning framework for quantitative analysis of chromatin fountains/stripes
+# Fun2 is tracking the untrackable
 
-
+A **reinforcement learning framework** for quantitative analysis of **chromatin fountains/stripes**
 <!-- Here is the workflow of Fun2 -->
 
 <div style="margin-bottom:200px; text-align:center;">
