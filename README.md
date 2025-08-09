@@ -61,7 +61,7 @@ conda activate fun2
 
 # 3) Install in development mode
 pip install -e .
-
+```
 ---
 
 ## 🖼️ Details
