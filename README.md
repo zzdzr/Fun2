@@ -27,7 +27,7 @@ A **reinforcement learning framework** for quantitative analysis of **chromatin 
   - [Configuration](#configuration)
   - [Sampling Box & Axes Configuration](#sampling-box--axes-configuration)
   - [Affine Transformation](#affine-transformation)
-  - [MCTS Planning](#mcts-planning)
+  - [Planning](#planning)
 - [Understanding the Output Files](#understanding-the-output-files)
 - [Repository Structure](#repository-structure)
 - [License & Citation](#license--citation)
@@ -202,7 +202,7 @@ Four primary forms of affine transformation are applied:
 By combining these transformations, Fun2 performs **geometric normalization** and optimizes box placement in a continuous spatial search space—forming the basis for trajectory detection and characterization.
 <br clear="all"/>
 
-## MCTS planning
+## Planning
 <p align="center">
   <img src="https://github.com/zzdzr/Fun2/blob/main/docs/image/MCTS.svg"
        alt="MCTS planning" width="730">
