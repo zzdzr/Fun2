@@ -1,4 +1,4 @@
-# Fun2: Characterize fountain / stripe-like chromatin structures
+# Fun2: Tracking the untrackable: A reinforcement learning framework for quantitative analysis of chromatin fountains/stripes
 
 <!-- Badges (可添加 Zenodo/License/Build Status) -->
 <!-- ![DOI](https://zenodo.org/badge/641802007.svg) -->
@@ -10,6 +10,35 @@
        width="1400" height="600" 
        style="border:none; display:block; margin:0 auto;">
 </div>
+
+> **Highlights**
+> - Sampling box / axes control for tiled, multi-resolution scans  
+> - Robust affine transforms for coordinate normalization  
+> - **MCTS** (Monte Carlo Tree Search) planning for trajectory search  
+> - Reproducible pipelines and exportable outputs (HDF5/CSV/figures)
+---
+
+# Table of Contents
+- [Fun2](#fun2-characterize-fountain--stripe-like-chromatin-structures)
+  - [Description](#description)
+- [Table of Contents](#table-of-contents)
+- [Getting Started / Installation](#getting-started--installation)
+  - [Quick start](#quick-start)
+  - [Environment notes](#environment-notes)
+- [Usage](#usage)
+  - [Sampling Box & Axes Configuration](#sampling-box--axes-configuration)
+  - [Affine Transformation](#affine-transformation)
+  - [MCTS Planning](#mcts-planning)
+  - [Working Model](#working-model)
+- [Examples](#examples)
+  - [Minimal end-to-end run](#minimal-end-to-end-run)
+  - [Batch over chromosomes](#batch-over-chromosomes)
+- [Practical Considerations](#practical-considerations)
+- [Understanding the Output Files](#understanding-the-output-files)
+- [Repository Structure](#repository-structure)
+- [License & Citation](#license--citation)
+
+---
 
 ## 🖼️ Details
 
@@ -29,7 +58,7 @@ We have recently published the RFpeptides protocol for using RFdiffusion to desi
 <br clear="all"/>
 
 ## MCTS planning
-<img src="https://github.com/zzdzr/Fun2/blob/main/docs/image/MCTS.svg" alt="Transformation" width="850" height="350"/>
+<img src="https://github.com/zzdzr/Fun2/blob/main/docs/image/MCTS.svg" alt="Transformation" width="700" height="350"/>
 
 Here is the illustration of MCTS planning.
 
