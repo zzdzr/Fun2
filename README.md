@@ -22,12 +22,11 @@ A **reinforcement learning framework** for quantitative analysis of **chromatin 
 - [Table of Contents](#table-of-contents)
 - [Getting Started / Installation](#getting-started--installation)
   - [Quick start](#quick-start)
-  - [Environment notes](#environment-notes)
 - [Usage](#usage)
+  - [Quick usage](#quick-usage)
   - [Sampling Box & Axes Configuration](#sampling-box--axes-configuration)
   - [Affine Transformation](#affine-transformation)
   - [MCTS Planning](#mcts-planning)
-  - [Working Model](#working-model)
 - [Examples](#examples)
   - [Minimal end-to-end run](#minimal-end-to-end-run)
   - [Batch over chromosomes](#batch-over-chromosomes)
@@ -54,7 +53,7 @@ git clone https://github.com/zzdzr/Fun2.git
 cd Fun2
 
 # 2) Create environment (recommended)
-conda env create -f environment.yml
+conda env create --name fun2 -f ./env/environment.yml
 conda activate fun2
 
 # 3) Install in development mode
@@ -62,10 +61,13 @@ pip install -e .
 ```
 ---
 
-## 🖼️ Details
+# 🖼️ Usage
 
+## Quick Usage
+Here is the one-step usage.
+<img src="https://github.com/zzdzr/Fun2/blob/main/docs/image/workingModel2.svg" alt="Transformation" width="850" height="350"/>
 
-## Sampling box and axes configuration
+## Sampling Box & Axes Configuration
 <img src="https://github.com/zzdzr/Fun2/blob/main/docs/image/axis.svg" alt="SamplingBox" width="500" height="500" align="left"/>
 
 We have recently published the RFpeptides protocol for using RFdiffusion to design macrocyclic peptides that bind target proteins with atomic accuracy (Rettie, Juergens, Adebomi, et al., 2025). In this section we briefly outline how to run this inference protocol. We have added two examples for running macrocycle design with the RFpeptides protocol. One for monomeric design, and one for binder design.
@@ -88,7 +90,5 @@ Here is the illustration of MCTS planning.
 
 ## Working
 <img src="https://github.com/zzdzr/Fun2/blob/main/docs/image/workingModel2.svg" alt="Transformation" width="850" height="350"/>
-
-Here is the illustration of MCTS planning.
 
 <br clear="all"/>
