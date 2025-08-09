@@ -17,7 +17,7 @@ A **reinforcement learning framework** for quantitative analysis of **chromatin 
 ---
 
 # Table of Contents
-- [Fun2](#fun2-characterize-fountain--stripe-like-chromatin-structures)
+- [Fun2](#fun2-is-tracking-the-untrackable)
   - [Description](#description)
 - [Table of Contents](#table-of-contents)
 - [Getting Started / Installation](#getting-started--installation)
