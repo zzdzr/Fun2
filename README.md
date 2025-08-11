@@ -1,4 +1,4 @@
-# Fun2 is tracking the untrackable
+# Fun2
 
 A **reinforcement learning framework** for quantitative analysis of **chromatin fountains/stripes**
 <!-- Here is the workflow of Fun2 -->
@@ -182,9 +182,9 @@ This enables the sampling box to **trace trajectory-like patterns** in the conta
 
 Four primary forms of affine transformation are applied:
 
-1. **Extension (`Δl`)**  
+1. **Extension (`Δh`)**  
    - Adjusts the box length (*h*, along the y-axis).  
-   - **−Δl** shortens the box; **+Δl** lengthens it, allowing coverage of varying segment lengths along the trajectory.
+   - **−Δh** shortens the box; **+Δh** lengthens it, allowing coverage of varying segment lengths along the trajectory.
 
 2. **Rotation (`Δθ`)**  
    - Rotates the box relative to the global *(u, v)* coordinate system.  
@@ -203,11 +203,11 @@ By combining these transformations, Fun2 performs **geometric normalization** an
 #### 5) Notation recap
 | Symbol / Parameter | Meaning (in this section) |
 |:--|:--|
-| `Δl` | Change in box length (*h*, along y-axis) |
+| `Δh` | Change in box length (*h*, along y-axis) |
 | `Δθ` | Change in box rotation angle (global *(u, v)* frame) |
 | `Δw` | Change in box width (*w*, along x-axis) |
 | `Δx` | Lateral shift (translocation) along x-axis |
-| `action_limits` | Maximum absolute changes allowed for `[Δw, Δl, Δθ, Δx]` |
+| `action_limits` | Maximum absolute changes allowed for `[Δw, Δh, Δθ, Δx]` |
 | `angle_boundary` | Angular constraints on `θ` (rotation) in degrees or radians |
 
 > **Note:** `action_limits` directly controls how much the sampling box can change per transformation step, while `angle_boundary` defines the allowable orientation range in the global coordinate system.
@@ -247,5 +247,20 @@ By iteratively refining box placement and orientation through MCTS, Fun2 is able
 - Balance global exploration with local exploitation, ensuring both novelty and accuracy in detection.
 
 This approach integrates **reinforcement learning principles** with **geometric search**, making the sampling process dynamic, data-driven, and optimal in high-dimensional spatial contexts.
+
+#### 5) Notation recap
+| Parameter | Meaning (in this section) |
+|:--|:--|
+| `max_iter` | Maximum number of MCTS iterations (*n* in the planning loop) |
+| `exploration_constant` | Controls exploration vs. exploitation in the UCB selection formula (larger → more exploration) |
+| `alpha` | Progressive widening coefficient, regulates branching growth in continuous space |
+| `es_popsize` | Population size for Evolution Strategies (ES) used in simulation/optimization |
+| `es_sigma` | Initial standard deviation of perturbations in ES search |
+| `momentum` | Momentum term for policy updates during value gradient estimation |
+| `max_rollout_depth` | Maximum depth for simulation rollouts from an expanded node |
+| `eta` | Learning rate scaling factor for policy/value updates |
+| `es_lr` | Learning rate for ES optimization of transformation parameters |
+| `gamma` | Discount factor for cumulative reward in trajectory evaluation |
+| `seed` | Random seed for reproducible MCTS and ES runs |
 
 <br clear="all"/>
