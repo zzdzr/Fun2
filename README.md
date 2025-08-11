@@ -266,7 +266,7 @@ This approach integrates **reinforcement learning principles** with **geometric 
 <br clear="all"/>
 
 
-
+---
 # Understanding the Output Files
 
 After running Fun2, the output directory contains the following key files and subfolders:
@@ -283,6 +283,7 @@ After running Fun2, the output directory contains the following key files and su
 
 [⬆️ Back to top](#table-of-contents)
 
+---
 # Citation
 ```bibtex
 @article{Zhang2025Fun2,
