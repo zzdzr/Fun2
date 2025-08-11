@@ -277,7 +277,7 @@ After running Fun2, the output directory contains the following key files and su
 | `results.csv` | Tabulated metrics (e.g., fountain scores, widths, angles, lengths) for each detected structure. |
 | `oe_matrix/` | Serialized configuration snapshots (YAML/JSON) for reproducibility and further analysis. |
 | `oe_cooler/` | Runtime logs including parameter settings, iteration summaries, and convergence diagnostics. |
-### 📄 Output file: `results_xx.csv` column description
+### 📄 Column description of output file
 
 | Column name         | Description | Unit / Range |
 |---------------------|-------------|--------------|
