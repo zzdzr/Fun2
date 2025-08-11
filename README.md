@@ -264,3 +264,26 @@ This approach integrates **reinforcement learning principles** with **geometric 
 | `seed` | Random seed for reproducible MCTS and ES runs |
 
 <br clear="all"/>
+
+
+
+## Understanding the Output Files
+
+After running Fun2, the output directory contains the following key files and subfolders:
+
+| File / Folder | Description |
+|:--|:--|
+| `figures/` | Publication-ready PNG/SVG figures showing detected fountains/stripes and sampling box placements. |
+| `results.csv` | Tabulated metrics (e.g., fountain scores, widths, angles, lengths) for each detected structure. |
+| `trajectory_snapshots/` | Serialized configuration snapshots (YAML/JSON) for reproducibility and further analysis. |
+| `logs/` | Runtime logs including parameter settings, iteration summaries, and convergence diagnostics. |
+| `background_estimates/` | Intermediate background intensity measurements from edge bands at each layer. |
+
+> **Tip:** The `trajectory_snapshots/` files can be directly reloaded to reproduce a specific detection run without repeating the full MCTS search.
+
+[⬆️ Back to top](#table-of-contents)
+
+---
+
+## Repository Structure
+
