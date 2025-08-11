@@ -200,6 +200,18 @@ Four primary forms of affine transformation are applied:
    - **−Δx** shifts left; **+Δx** shifts right, enabling local repositioning while maintaining the same geometric parameters.
 
 By combining these transformations, Fun2 performs **geometric normalization** and optimizes box placement in a continuous spatial search space—forming the basis for trajectory detection and characterization.
+#### 5) Notation recap
+| Symbol / Parameter | Meaning (in this section) |
+|:--|:--|
+| `Δl` | Change in box length (*h*, along y-axis) |
+| `Δθ` | Change in box rotation angle (global *(u, v)* frame) |
+| `Δw` | Change in box width (*w*, along x-axis) |
+| `Δx` | Lateral shift (translocation) along x-axis |
+| `action_limits` | Maximum absolute changes allowed for `[Δw, Δl, Δθ, Δx]` |
+| `angle_boundary` | Angular constraints on `θ` (rotation) in degrees or radians |
+
+> **Note:** `action_limits` directly controls how much the sampling box can change per transformation step, while `angle_boundary` defines the allowable orientation range in the global coordinate system.
+
 <br clear="all"/>
 
 ## Planning
