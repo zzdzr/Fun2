@@ -273,13 +273,39 @@ After running Fun2, the output directory contains the following key files and su
 
 | File / Folder | Description |
 |:--|:--|
-| `figures/` | Publication-ready PNG/SVG figures showing detected fountains/stripes and sampling box placements. |
+| `summits/` | Publication-ready PNG/SVG figures showing detected fountains/stripes and sampling box placements. |
 | `results.csv` | Tabulated metrics (e.g., fountain scores, widths, angles, lengths) for each detected structure. |
-| `trajectory_snapshots/` | Serialized configuration snapshots (YAML/JSON) for reproducibility and further analysis. |
-| `logs/` | Runtime logs including parameter settings, iteration summaries, and convergence diagnostics. |
-| `background_estimates/` | Intermediate background intensity measurements from edge bands at each layer. |
+| `oe_matrix/` | Serialized configuration snapshots (YAML/JSON) for reproducibility and further analysis. |
+| `oe_cooler/` | Runtime logs including parameter settings, iteration summaries, and convergence diagnostics. |
+### 📄 Output file: `results_xx.csv` column description
 
-> **Tip:** The `trajectory_snapshots/` files can be directly reloaded to reproduce a specific detection run without repeating the full MCTS search.
+| Column name         | Description | Unit / Range |
+|---------------------|-------------|--------------|
+| `chrom`             | Chromosome ID | — |
+| `summit_start`      | Start position of the detected summit (genomic coordinate) | bp |
+| `summit_end`        | End position of the detected summit (genomic coordinate) | bp |
+| `identified_center` | Peak center position identified by Fun2 | bp |
+| `height`            | Sampling box length along the y-axis | bins or bp (depends on resolution) |
+| `width`             | Sampling box width along the x-axis | bins or bp |
+| `angle`             | Sampling box rotation angle relative to the global (u, v) axes (0° ∥ v-axis; 90° ∥ u-axis) | degrees |
+| `elongation_up`     | Upstream elongation length from the peak center | bp |
+| `elongation_down`   | Downstream elongation length from the peak center | bp |
+| `width_up`          | Sampling box width in the upstream extension region | bp |
+| `width_down`        | Sampling box width in the downstream extension region | bp |
+| `reward`            | Cumulative reward score from MCTS planning | — (higher is better) |
+| `intensity`         | Normalized signal intensity in the central region | 0–1 |
+| `quality`           | Quality score combining intensity, contrast, and other metrics | 0–1 |
+| `pval_upstream`     | P-value of signal significance in the upstream background region | 0–1 (smaller is more significant) |
+| `pval_downstream`   | P-value of signal significance in the downstream background region | 0–1 (smaller is more significant) |
+| `rb_upstream`       | Signal-to-background ratio in the upstream region | — |
+| `rb_downstream`     | Signal-to-background ratio in the downstream region | — |
+| `FDR_upstream`      | False discovery rate in the upstream background region | 0–1 (smaller is more significant) |
+| `FDR_downstream`    | False discovery rate in the downstream background region | 0–1 (smaller is more significant) |
+
+> **Note:**  
+> - Coordinates are in bp; bin size depends on the Hi-C resolution.  
+> - `reward` is computed during the MCTS + ES optimization process and can be used for ranking structures.  
+> - The definition of `angle` follows the convention in the [Sampling Box & Axes Configuration](#sampling-box--axes-configuration) section.
 
 [⬆️ Back to top](#table-of-contents)
 
