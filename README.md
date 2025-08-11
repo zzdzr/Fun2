@@ -58,9 +58,9 @@ pip install -e .
 ```
 ---
 
-# 🖼️ Usage
+# Usage
 
-## One-step usage
+## 🖼️ One-step usage
 Here is the one-step usage.
 <img src="https://github.com/zzdzr/Fun2/blob/main/docs/image/workingModel2.svg" alt="Transformation" width="800" height="350"/>
 ```bash
@@ -267,7 +267,7 @@ This approach integrates **reinforcement learning principles** with **geometric 
 
 
 
-## Understanding the Output Files
+# Understanding the Output Files
 
 After running Fun2, the output directory contains the following key files and subfolders:
 
@@ -283,8 +283,7 @@ After running Fun2, the output directory contains the following key files and su
 
 [⬆️ Back to top](#table-of-contents)
 
----
-## Citation
+# Citation
 ```bibtex
 @article{Zhang2025Fun2,
 title = {Fun2: Reinforcement learning framework for quantitative analysis of chromatin fountains/stripes},
