@@ -18,7 +18,6 @@ A **reinforcement learning framework** for quantitative analysis of **chromatin 
 
 # Table of Contents
 - [Fun2](#fun2-is-tracking-the-untrackable)
-  - [Description](#description)
 - [Table of Contents](#table-of-contents)
 - [Getting Started / Installation](#getting-started--installation)
   - [Quick start](#quick-start)
@@ -34,12 +33,6 @@ A **reinforcement learning framework** for quantitative analysis of **chromatin 
 
 ---
 
-## Description
-Chromatin is intricately folded into dynamic 3D structures, orchestrating key DNA metabolic processes. DNA replication, a core chromatin metabolic event, is tightly linked to these chromatin architectures. Recently, a replication-associated chromatin interaction structure was discovered as fountains via Replication-associated in situ Hi-C (Repli-HiC), supporting that replication forks remain spatially coupled from initiation to termination. Chromatin fountains are pivotal for understanding DNA replication within the complex chromatin landscape. However, the characteristics of these fountains can vary due to factors such as origin firing efficiency and local chromatin organization. In this study, we introduce **a reinforcement learning-based computational framework**, integrated with **Monte Carlo Tree Search (MCTS) and value gradient optimization**, to develop the Fun2 algorithm. Fun2 enables a comprehensive characterization of trajectory-like chromatin architectures, including both chromatin fountains and stripes, with enhanced adaptability and accuracy. This tool facilitates systematic investigation of the spatiotemporal dynamics of DNA replication and extends to other chromatin remodeling processes, such as Cohesin-mediated loop extrusion. The Fun2 algorithm provides a versatile computational tool for deciphering dynamic chromatin architectures, offering new insights into genome organization and its regulatory mechanisms.
-
-[⬆️ Back to top](#table-of-contents)
-
----
 
 # Getting Started / Installation
 
