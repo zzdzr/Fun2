@@ -284,12 +284,15 @@ After running Fun2, the output directory contains the following key files and su
 [⬆️ Back to top](#table-of-contents)
 
 ---
+## Citation
+```bibtex
 @article{Zhang2025Fun2,
-  title={Fun2: Reinforcement learning framework for quantitative analysis of chromatin fountains/stripes},
-  author={Zhang, Zhen and Li, ...},
-  journal={Bioinformatics},
-  year={2025},
-  volume={XX},
-  pages={XXX--XXX},
-  doi={10.1093/bioinformatics/btvXXX}
+title = {Fun2: Reinforcement learning framework for quantitative analysis of chromatin fountains/stripes},
+author = {Zhang, Zhen and Li, ...},
+journal = {Bioinformatics},
+year = {2025},
+volume = {XX},
+pages = {XXX--XXX},
+doi = {10.1093/bioinformatics/btvXXX}
 }
+```
