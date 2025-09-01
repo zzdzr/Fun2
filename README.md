@@ -54,7 +54,6 @@ pip install -e .
 # Usage
 
 ## 🖼️ One-step usage
-Here is the one-step usage.
 <img src="https://github.com/zzdzr/Fun2/blob/main/docs/image/workingModel2.svg" alt="Transformation" width="800" height="350"/>
 ```bash
 # 1) You just need to submit one line of command:
@@ -161,7 +160,7 @@ nohup fun2 config.yaml &
 | `w` | Box width along **x** | `width` |
 | `h` | Box height (length) along **y** | `height` |
 | `K` | Number of layers along **y** | `K = h / layer_height` |
-| `edge_width` | Width of background bands | `edge_width` |
+| `edge_width` | Width of bands for estimating background signal | `edge_width` |
 
 <br clear="all"/>
 
@@ -182,26 +181,25 @@ Four primary forms of affine transformation are applied:
 2. **Rotation (`Δθ`)**  
    - Rotates the box relative to the global *(u, v)* coordinate system.  
    - **−Δθ** rotates counter-clockwise; **+Δθ** rotates clockwise.  
-   - Enables alignment of the sampling box with directional patterns in the data.
 
 3. **Expansion (`Δw`)**  
    - Modifies the box width (*w*, along the x-axis).  
-   - **−Δw** narrows the box; **+Δw** widens it, tuning the cross-track coverage and sensitivity.
+   - **−Δw** narrows the box; **+Δw** widens it.
 
 4. **Translocation (`Δx`)**  
-   - Shifts the box laterally along the x-axis without changing its orientation or dimensions.  
+   - Shifts the box laterally along the diagonal of contact matrix without changing its orientation or dimensions.  
    - **−Δx** shifts left; **+Δx** shifts right, enabling local repositioning while maintaining the same geometric parameters.
 
-By combining these transformations, Fun2 performs **geometric normalization** and optimizes box placement in a continuous spatial search space—forming the basis for trajectory detection and characterization.
+By combining these transformations, Fun2 optimizes box placement in a continuous spatial search space—forming the basis for trajectory detection and characterization.
 #### 5) Notation recap
 | Symbol / Parameter | Meaning (in this section) |
 |:--|:--|
 | `Δh` | Change in box length (*h*, along y-axis) |
 | `Δθ` | Change in box rotation angle (global *(u, v)* frame) |
 | `Δw` | Change in box width (*w*, along x-axis) |
-| `Δx` | Lateral shift (translocation) along x-axis |
+| `Δx` | Lateral shift (translocation) along the diagonal of contact matrix |
 | `action_limits` | Maximum absolute changes allowed for `[Δw, Δh, Δθ, Δx]` |
-| `angle_boundary` | Angular constraints on `θ` (rotation) in degrees or radians |
+| `angle_boundary` | Angular constraints on `θ` (rotation) in degree |
 
 > **Note:** `action_limits` directly controls how much the sampling box can change per transformation step, while `angle_boundary` defines the allowable orientation range in the global coordinate system.
 
@@ -266,8 +264,8 @@ After running Fun2, the output directory contains the following key files and su
 
 | File / Folder | Description |
 |:--|:--|
-| `summits/` | Publication-ready PNG/SVG figures showing detected fountains/stripes and sampling box placements. |
-| `results.csv` | Tabulated metrics (e.g., fountain scores, widths, angles, lengths) for each detected structure. |
+| `summits/` | Folder contains detected summits at the preprocessing step. |
+| `results` | Tabulated metrics (e.g., fountain quality, width, angle, length, position) for each detected structure. |
 | `oe_matrix/` | Serialized configuration snapshots (YAML/JSON) for reproducibility and further analysis. |
 | `oe_cooler/` | Runtime logs including parameter settings, iteration summaries, and convergence diagnostics. |
 ### 📄 Column description of output file
@@ -277,27 +275,25 @@ After running Fun2, the output directory contains the following key files and su
 | `chrom`             | Chromosome ID | — |
 | `summit_start`      | Start position of the detected summit (genomic coordinate) | bp |
 | `summit_end`        | End position of the detected summit (genomic coordinate) | bp |
-| `identified_center` | Peak center position identified by Fun2 | bp |
-| `height`            | Sampling box length along the y-axis | kb |
+| `identified_center` | Summit center position identified by Fun2 | bp |
+| `height`            | Sampling box length/height along the y-axis | kb |
 | `width`             | Sampling box width along the x-axis | kb |
 | `angle`             | Sampling box rotation angle relative to the global (u, v) axes (0° ∥ v-axis; 90° ∥ u-axis) | degrees |
-| `elongation_up`     | Upstream elongation length from the peak center | bp |
-| `elongation_down`   | Downstream elongation length from the peak center | bp |
-| `width_up`          | Sampling box width in the upstream extension region | bp |
-| `width_down`        | Sampling box width in the downstream extension region | bp |
-| `reward`            | Cumulative reward score from MCTS planning | — (higher is better) |
-| `intensity`         | Normalized signal intensity in the central region | - |
-| `quality`           | Quality score combining intensity, contrast, and other metrics | - |
-| `pval_upstream`     | P-value of signal significance in the upstream background region | smaller is more significant |
-| `pval_downstream`   | P-value of signal significance in the downstream background region | smaller is more significant |
-| `rb_upstream`       | Signal-to-background ratio in the upstream region | — |
-| `rb_downstream`     | Signal-to-background ratio in the downstream region | — |
-| `FDR_upstream`      | False discovery rate in the upstream background region | smaller is more significant |
-| `FDR_downstream`    | False discovery rate in the downstream background region | smaller is more significant |
+| `elongation_up`     | Genomic position for upstream end of elongation | bp |
+| `elongation_down`   | Genomic position for downstream end of elongation  | bp |
+| `width_up`          | Genomic position for upstream end of box' width | bp |
+| `width_down`        | Genomic position for downstream end of box' width | bp |
+| `reward`            | Reward score from MCTS planning | — (higher is better) |
+| `intensity`         | Signal intensity for the sampling box | - |
+| `quality`           | Quality score for identified structure | - |
+| `pval_upstream`     | Raw P-value of signal significance for the sampling box relative to upstream background region |
+| `pval_downstream`   | Raw P-value of signal significance for the sampling box relative to downstream background region |
+| `FDR_upstream`      | Adjusted P-value for the sampling box relative to upstream background region |
+| `FDR_downstream`    | Adjusted P-value for the sampling box relative to upstream background region |
 
 > **Note:**  
 > - Coordinates are in bp; bin size depends on the Hi-C resolution.  
-> - `reward` is computed during the MCTS + ES optimization process and can be used for ranking structures.  
+> - `reward` is computed during the MCTS + ES optimization process.  
 > - The definition of `angle` follows the convention in the [Sampling Box & Axes Configuration](#sampling-box--axes-configuration) section.
 
 [⬆️ Back to top](#table-of-contents)
