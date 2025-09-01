@@ -1,7 +1,7 @@
 # Fun2
 
 A **reinforcement learning framework** for the dynamic tracing of **chromatin fountains/stripes**
-The project is **updating**
+> - The project is **updating**
 <!-- Here is the workflow of Fun2 -->
 
 <div style="margin-bottom:200px; text-align:center;">
