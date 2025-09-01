@@ -287,10 +287,10 @@ After running Fun2, the output directory contains the following key files and su
 | `reward`            | Reward score from MCTS planning | — (higher is better) |
 | `intensity`         | Signal intensity for the sampling box | - |
 | `quality`           | Quality score for identified structure | - |
-| `pval_upstream`     | Raw P-value of signal significance for the sampling box relative to upstream background region |
-| `pval_downstream`   | Raw P-value of signal significance for the sampling box relative to downstream background region |
-| `FDR_upstream`      | Adjusted P-value for the sampling box relative to upstream background region |
-| `FDR_downstream`    | Adjusted P-value for the sampling box relative to upstream background region |
+| `pval_upstream`     | Raw P-value of signal significance for the sampling box relative to upstream background region | - |
+| `pval_downstream`   | Raw P-value of signal significance for the sampling box relative to downstream background region | - |
+| `FDR_upstream`      | Adjusted P-value for the sampling box relative to upstream background region | - |
+| `FDR_downstream`    | Adjusted P-value for the sampling box relative to upstream background region | - |
 
 > **Note:**  
 > - Coordinates are in bp; bin size depends on the Hi-C resolution.  
