@@ -1,7 +1,6 @@
 # Fun2
 
 A **reinforcement learning framework** for the dynamic tracing of **chromatin fountains/stripes**
-> - The project is **updating**
 <!-- Here is the workflow of Fun2 -->
 
 <div style="margin-bottom:200px; text-align:center;">
@@ -11,10 +10,10 @@ A **reinforcement learning framework** for the dynamic tracing of **chromatin fo
 </div>
 
 > **Highlights**
+> - The project is **updating**
 > - Developed and validated a novel method for high-precision identification and tracking of **fountain / stripe-like chromatin structures**.
-> - Integrated reinforcement learning with **Monte Carlo Tree Search (MCTS) in a continuous spatial action space**, combined with geometric transformation (**affine transformation**) to jointly optimize sampling and trajectory planning while enabling cross-sample and cross-condition comparability.
-> - Produced reproducible outputs including visual figures, scoring tables, and configuration snapshots, enabling large-scale screening and hypothesis testing.
-> - Quantitatively characterized dynamic changes between coupled and uncoupled replication fork states under various replication stress conditions.
+> - Integrated reinforcement learning with **Monte Carlo Tree Search (MCTS) in a continuous spatial action space**, combined with geometric transformation (**affine transformation**) to jointly optimize sampling and trajectory planning while enabling cross-sample or cross-condition comparability.
+> - Quantitatively characterized the dynamic changes for the trajectory-like chromatin structures.
 ---
 
 # Table of Contents
