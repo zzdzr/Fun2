@@ -305,13 +305,12 @@ After running Fun2, the output directory contains the following key files and su
 ---
 # Citation
 ```bibtex
-@article{Zhang2025Fun2,
-title = {Fun2: Reinforcement learning framework for quantitative analysis of chromatin fountains/stripes},
-author = {Zhang, Zhen and Li, ...},
-journal = {Bioinformatics},
-year = {2025},
-volume = {XX},
-pages = {XXX--XXX},
-doi = {10.1093/bioinformatics/btvXXX}
+@article{Zhangding2025Fun2,
+  title   = {Characterizing trajectory-like chromatin architectures with Fun2},
+  author  = {Zhengrong Zhangding, Xuhao Liu and Jiazhi Hu},
+  journal = {bioRxiv},
+  year    = {2025},
+  doi     = {10.1101/2025.02.25.640072},
+  url     = {https://doi.org/10.1101/2025.02.25.640072}
 }
 ```
