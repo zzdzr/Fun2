@@ -10,7 +10,7 @@ A **reinforcement learning framework** for the dynamic tracing of **chromatin fo
 </div>
 
 > **Highlights**
-> - The project is **actively updating** Feedback and issues are welcome — I will continue to improve and update the repository regularly.
+> - The project is **actively updating**, feedback and issues are welcome — I will continue to improve and update the repository regularly.
 > - Developed and validated a novel method for high-precision identification and tracking of **fountain / stripe-like chromatin structures**.
 > - Integrated reinforcement learning with **Monte Carlo Tree Search (MCTS) in a continuous spatial action space**, combined with geometric transformation (**affine transformation**) to jointly optimize sampling and trajectory planning while enabling cross-sample or cross-condition comparability.
 > - Quantitatively characterize the dynamic changes for the trajectory-like chromatin structures.
