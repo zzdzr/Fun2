@@ -6,8 +6,6 @@ __pycache__/
 # ===== Virtual/conda environments =====
 .venv/
 venv/
-env/
-ENV/
 *.conda
 *.egg-info/
 *.eggs/
