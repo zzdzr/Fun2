@@ -26,6 +26,7 @@ from typing import List, Dict, Tuple, Any
 from fun2.planning.planning import Fun2Planning
 from fun2.logging import log_step, skip_if_exists
 from fun2.perform_command import run_single_command
+from fun2.preprocessing.find_summits import SummitsFinder
 
 # -----------------------------------------------------------------------------
 # Global Logging Setup
@@ -298,7 +299,7 @@ class CombineSummits:
         Args:
             config (PipelineConfig): The configuration object.
         """
-        from utils.find_summits import SummitsFinder
+        
         import pandas as pd
 
         self.combine_summits = SummitsFinder.combine_summits

@@ -125,7 +125,7 @@ def mapping_coverage(agent: SamplingBoxAgent, bin_start_adjusted: int, resolutio
 def transform(resolution: int, genuine_length: Union[int, float], type_: str = 'height') -> float:
 
     if type_ == 'height':
-        pixel_length = genuine_length * 2 * np.sqrt(2) * 1000 / resolution
+        pixel_length = genuine_length * 2 * np.sqrt(2) * 1000 / resolution # Should be genome length
     else:
         pixel_length = genuine_length * np.sqrt(2) * 1000 / resolution
 
