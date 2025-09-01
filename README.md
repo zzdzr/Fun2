@@ -13,7 +13,7 @@ A **reinforcement learning framework** for the dynamic tracing of **chromatin fo
 > - The project is **updating**
 > - Developed and validated a novel method for high-precision identification and tracking of **fountain / stripe-like chromatin structures**.
 > - Integrated reinforcement learning with **Monte Carlo Tree Search (MCTS) in a continuous spatial action space**, combined with geometric transformation (**affine transformation**) to jointly optimize sampling and trajectory planning while enabling cross-sample or cross-condition comparability.
-> - Quantitatively characterized the dynamic changes for the trajectory-like chromatin structures.
+> - Quantitatively characterize the dynamic changes for the trajectory-like chromatin structures.
 ---
 
 # Table of Contents
@@ -55,6 +55,7 @@ pip install -e .
 
 ## 🖼️ One-step usage
 <img src="https://github.com/zzdzr/Fun2/blob/main/docs/image/workingModel2.svg" alt="Transformation" width="800" height="350"/>
+
 ```bash
 # 1) You just need to submit one line of command:
 nohup fun2 config.yaml &
