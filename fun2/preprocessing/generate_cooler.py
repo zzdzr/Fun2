@@ -24,11 +24,9 @@ class CoolerGenerator:
         for file in sparse_matrix_li:
             # get chromsome information
             chrom_match = re.search(r"\bchr[0-9XYM]+\b", file)
-            print(f"chrom match is {chrom_match}!!!!!!")
             if chrom_match:
                 chrom = chrom_match.group()
                 file_path = os.path.join(self.pixels_dir, file)
-                print(file_path)
 
                 with open(file_path, 'r') as f:
                     for line in f:
@@ -63,7 +61,6 @@ class CoolerGenerator:
         """
         bins = []
         for chrom, size in chrom_sizes.items():
-            print(chrom, size)
             bins.append(pd.DataFrame({
                 'chrom': [chrom] * ((size // self.resolution)+1),
                 'start': range(0, size, self.resolution),
@@ -106,7 +103,6 @@ class CoolerGenerator:
         if len(pixels)>0:
             pixels = pixels.loc[:, ['bin1_id', 'bin2_id', 'count']]
             
-        # print(pixels)
         return pixels
 
     def generate_cooler_obj(self, bins: pd.DataFrame, pixels: pd.DataFrame, output: str, assembly: str) -> cooler:
@@ -121,8 +117,6 @@ class CoolerGenerator:
         Returns:
             cooler: cooler object containing matrix for all chromosomes
         """
-        # print("Columns in pixels DataFrame before creating cooler:", pixels.columns)
-        # print(pixels.head())
         
         cooler.create_cooler(
             cool_uri = output,
@@ -146,11 +140,7 @@ def main(args) -> None:
     pixels = generator._load_sparse_matrices()
     bins = generator._generate_bins(chrom_sizes)
 
-    print(bins)
-    print(pixels)
-
     refined_pixels = generator._generate_refined_pixels(bins, pixels)
-    print(refined_pixels)
 
     generator.generate_cooler_obj(
         bins = bins, pixels = refined_pixels, output = args.output, assembly = args.assembly 
