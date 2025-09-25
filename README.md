@@ -9,11 +9,12 @@ A **reinforcement learning framework** for the dynamic tracing of **chromatin fo
        style="border:none; display:block; margin:0 auto;">
 </div>
 
-> [!NOTE]  
-> - The project is **actively updating**, feedback and issues are welcome — I will continue to improve and update the repository regularly.
+> **Highlights**
 > - Developed and validated a novel method for high-precision identification and tracking of **fountain / stripe-like chromatin structures**.
 > - Integrated reinforcement learning with **Monte Carlo Tree Search (MCTS) in a continuous spatial action space**, combined with geometric transformation (**affine transformation**) to jointly optimize sampling and trajectory planning while enabling cross-sample or cross-condition comparability.
 > - Quantitatively characterize the dynamic changes for the trajectory-like chromatin structures.
+> [!NOTE]
+> - The project is **actively updating**, feedback and issues are welcome — I will continue to improve and update the repository regularly.
 ---
 
 # Table of Contents
@@ -292,7 +293,7 @@ After running Fun2, the output directory contains the following key files and su
 | `FDR_upstream`      | Adjusted P-value for the sampling box relative to upstream background region | - |
 | `FDR_downstream`    | Adjusted P-value for the sampling box relative to upstream background region | - |
 
-> **Note:**  
+> [!NOTE] 
 > - Coordinates are in bp; bin size depends on the Hi-C resolution.  
 > - `reward` is computed during the MCTS + ES optimization process.  
 > - The definition of `angle` follows the convention in the [Sampling Box & Axes Configuration](#sampling-box--axes-configuration) section.
