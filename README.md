@@ -9,7 +9,7 @@ A **reinforcement learning framework** for the dynamic tracing of **chromatin fo
        style="border:none; display:block; margin:0 auto;">
 </div>
 
-> **Highlights**
+> [!NOTE]  
 > - The project is **actively updating**, feedback and issues are welcome — I will continue to improve and update the repository regularly.
 > - Developed and validated a novel method for high-precision identification and tracking of **fountain / stripe-like chromatin structures**.
 > - Integrated reinforcement learning with **Monte Carlo Tree Search (MCTS) in a continuous spatial action space**, combined with geometric transformation (**affine transformation**) to jointly optimize sampling and trajectory planning while enabling cross-sample or cross-condition comparability.
@@ -53,7 +53,7 @@ pip install -e .
 
 # Usage
 
-## 🖼️ One-step usage
+## One-step usage
 <img src="https://github.com/zzdzr/Fun2/blob/main/docs/image/workingModel2.svg" alt="Transformation" width="800" height="350"/>
 
 ```bash
