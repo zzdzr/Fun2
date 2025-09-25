@@ -2,8 +2,7 @@
 
 A **reinforcement learning framework** for the dynamic tracing of **chromatin fountains/stripes**
 <!-- Here is the workflow of Fun2 -->
-> [!NOTE]
-> - The project is **actively updating**, feedback and issues are welcome — I will continue to improve and update the repository regularly.
+---
 <div style="margin-bottom:200px; text-align:center;">
   <img src="https://github.com/zzdzr/Fun2/blob/main/docs/image/workingModel4.svg" 
        width="1400" height="600" 
