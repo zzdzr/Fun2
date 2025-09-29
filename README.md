@@ -59,7 +59,7 @@ pip install -e .
 
 ```bash
 # 1) You just need to submit one line of command:
-nohup fun2 config.yaml &
+nohup fun2 --config config.yaml &
 ```
 
 ## Configuration
