@@ -141,7 +141,7 @@ class SamplingBoxAgent:
         angle = angle or self.angle
 
         rect = ((float(center[0]), float(center[1])), (float(width), float(height)), float(angle))
-        box = np.int0(cv2.boxPoints(rect))
+        box = cv2.boxPoints(rect).astype(np.intp)
         if not np.all(np.isfinite(box)):
             raise ValueError("Invalid box coordinates: contains NaN or non-finite values.")
         return box

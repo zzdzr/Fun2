@@ -123,7 +123,7 @@ def generate_box(center: tuple, width: float, height: float, angle: float) -> np
         (float(width), float(height)), float(angle)
     )
     # only half of box
-    box = cv2.boxPoints(rect).astype(np.int32)
+    box = cv2.boxPoints(rect).astype(np.intp)
     box[0] = (box[0] + box[1])//2
     box[3] = (box[2] + box[3])//2
 
