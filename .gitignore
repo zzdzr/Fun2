@@ -12,6 +12,7 @@ venv/
 .env
 condaenv.*
 conda-requirements.txt
+*.egg-info/
 
 # ===== Environment files =====
 # Keep only the clean versions you want in repo
