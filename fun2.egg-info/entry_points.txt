@@ -1,0 +1,2 @@
+[console_scripts]
+fun2 = fun2.cli.implement_fun2:main
