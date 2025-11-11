@@ -1,0 +1,49 @@
+# ===== Python cache =====
+__pycache__/
+*.py[cod]
+*$py.class
+
+# ===== Virtual/conda environments =====
+.venv/
+venv/
+*.conda
+*.egg-info/
+*.eggs/
+.env
+condaenv.*
+conda-requirements.txt
+
+# ===== Environment files =====
+# Keep only the clean versions you want in repo
+*.yml
+!environment.yml
+*.yaml
+!environment.yaml
+*.txt
+!requirements.txt
+
+# ===== Jupyter Notebook checkpoints =====
+.ipynb_checkpoints
+
+# ===== Logs and temp files =====
+*.log
+*.tmp
+*.temp
+*.bak
+
+# ===== OS generated =====
+.DS_Store
+Thumbs.db
+
+# ===== Build / dist artifacts =====
+build/
+dist/
+*.egg-info
+*.egg
+.eggs/
+*.so
+*.pyd
+*.pyo
+
+eval*
+*.pub
